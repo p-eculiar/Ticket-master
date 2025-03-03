@@ -1,0 +1,15 @@
+{
+  "short_name": "MyApp",
+  "name": "My Web Application",
+  "icons": [
+    {
+      "src": "path/to/your-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0000FF",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait"
+}
