@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+  <!-- iOS web app icon -->
+  <link rel="apple-touch-icon" href="./Images/images.png">
+  <!-- Optional: Theme color (optional but recommended) -->
+  <meta name="theme-color" content="#000000">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="My App">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+ 
+  <title>Event Carousel</title>
+  <!-- Load Swiper CSS first -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./updated_styles.css">
+</head>
+<body>
+
+<!-- Loading Animation Overlay -->
+<div id="loading-overlay">
+  <div class="loading-content">
+    <div class="logo-container">
+      <img src="./Images/images.png" alt="Logo" class="loading-logo">
+    </div>
+    <div class="loading-text">
+      <span>W</span>
+      <span>E</span>
+      <span>L</span>
+      <span>C</span>
+      <span>O</span>
+      <span>M</span>
+      <span>E</span>
+      <span>&nbsp;</span>
+      <span>B</span>
+      <span>A</span>
+      <span>C</span>
+      <span>K</span>
+      <span>&nbsp;</span>
+      <span>F</span>
+      <span>E</span>
+      <span>B</span>
+      <span>E</span>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+  <button class="back-btn"><i class="fas fa-times"></i></button>
+  <h1 style="font-size:17px;font-weight:400;">My Ticket</h1>
+  <button style="font-size:17px;font-weight:500;" class="help-btn" id="help-btn">Help</button>
+  <button class="add-btn" id="add-btn" style="display: none;">Add Card</button>
+</div>
+  
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Event Card 1 -->
+      <div class="swiper-slide card" data-event-time="2025-05-15T20:00:00">
+        <div class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></div>
+        <div class="ticket-info">
+          <p style="margin-bottom:18px;margin-top:-8px;font-weight:300;font-size:14px; padding:15px">Standard Ticket</p>
+          <div class="seat-info">
+            <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEC<br><span>143</span></div>
+            <div style="margin-bottom:6px;font-weight:300;font-size:13px;">ROW<br><span>7</span></div>
+            <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEAT<br><span>3</span></div>
+          </div>
+        </div>
+        <div class="event-details">
+          <div class="gradient-overlay">
+            <img src="./Images/image-1.jpeg" alt="Event">
+            <div class="overlay-content">
+              <h2>Taylor Swift - The Eras Tour</h2>
+              <p>Fri, October 18, 07:00 - Hard Rock Stadium</p>
+            </div>
+          </div>
+        </div>
+        <div class="countdown" style="line-height:4.5rem">
+          <p style="margin-top:-22px;font-size:14px;font-weight:300;">Ticket will be ready in:</p>
+          <div class="timer" style="line-height:1.5rem !important;">
+            <div><span>34</span><h3>DAY</h3></div>
+            <div><span>11</span><h3>HOUR</h3></div>
+            <div><span>33</span><h3>MIN</h3></div>
+            <div><span>52</span><h3>SEC</h3></div>
+          </div>
+          <a href="#" class="details-link">Ticket Details</a>
+        </div>
+        <div class="ticket-info">
+        <p style="margin-bottom:15px;font-weight:300;font-size:13px;margin-top:12px;font-style:italic; color:#efefef;display:flex;align-items:center;justify-content:center;"><img src="./Images/money.jpg" style="margin-top:-6px"><i>ticketmaster.verified</i></p>
+        </div>
+        </div>
+    
+     <!-- Event Card 2 -->
+     <div class="swiper-slide card" data-event-time="2025-06-15T20:00:00">
+     <div class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></div>
+     <div class="ticket-info">
+     <p style="margin-bottom:18px;margin-top:-8px;font-weight:300;font-size:14px; padding:15px">Standard Ticket</p>
+     <div class="seat-info">
+     <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEC<br><span>143</span></div>
+     <div style="margin-bottom:6px;font-weight:300;font-size:13px;">ROW<br><span>7</span></div>
+     <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEAT<br><span>3</span></div>
+     </div>
+     </div>
+     <div class="event-details">
+     <div class="gradient-overlay">
+     <img src="./Images/image-1.jpeg" alt="Event">
+     <div class="overlay-content">
+     <h2>Taylor Swift - The Eras Tour</h2>
+     <p>Fri, October 18, 07:00 - Hard Rock Stadium</p>
+     </div>
+     </div>
+     </div>
+     <div class="countdown" style="line-height:4.5rem">
+     <p style="margin-top:-22px;font-size:14px;font-weight:300;">Ticket will be ready in:</p>
+     <div class="timer" style="line-height:1.5rem !important;">
+     <div><span>34</span><h3>DAY</h3></div>
+     <div><span>11</span><h3>HOUR</h3></div>
+     <div><span>33</span><h3>MIN</h3></div>
+     <div><span>52</span><h3>SEC</h3></div>
+     </div>
+     <a href="#" class="details-link">Ticket Details</a>
+     </div>
+     <div class="ticket-info">
+     <p style="margin-bottom:15px;font-weight:300;font-size:13px;margin-top:12px;font-style:italic; color:#efefef;display:flex;align-items:center;justify-content:center;"><img src="./Images/money.jpg" style="margin-top:-6px"><i>ticketmaster.verified</i></p>
+     </div>
+     </div>
+      
+      <!-- Event Card 3 -->
+      <div class="swiper-slide card" data-event-time="2025-06-15T10:00:00">
+      <div class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></div>
+      <div class="ticket-info">
+      <p style="margin-bottom:18px;margin-top:-8px;font-weight:300;font-size:14px; padding:15px">Standard Ticket</p>
+      <div class="seat-info">
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEC<br><span>143</span></div>
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">ROW<br><span>7</span></div>
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEAT<br><span>3</span></div>
+      </div>
+      </div>
+      <div class="event-details">
+      <div class="gradient-overlay">
+      <img src="./Images/image-1.jpeg" alt="Event">
+      <div class="overlay-content">
+      <h2>Taylor Swift - The Eras Tour</h2>
+      <p>Fri, October 18, 07:00 - Hard Rock Stadium</p>
+      </div>
+      </div>
+      </div>
+      <div class="countdown" style="line-height:4.5rem">
+      <p style="margin-top:-22px;font-size:14px;font-weight:300;">Ticket will be ready in:</p>
+      <div class="timer" style="line-height:1.5rem !important;">
+      <div><span>34</span><h3>DAY</h3></div>
+      <div><span>11</span><h3>HOUR</h3></div>
+      <div><span>33</span><h3>MIN</h3></div>
+      <div><span>52</span><h3>SEC</h3></div>
+      </div>
+      <a href="#" class="details-link">Ticket Details</a>
+      </div>
+      <div class="ticket-info">
+      <p style="margin-bottom:15px;font-weight:300;font-size:13px;margin-top:12px;font-style:italic; color:#efefef;display:flex;align-items:center;justify-content:center;"><img src="./Images/money.jpg" style="margin-top:-6px"><i>ticketmaster.verified</i></p>
+      </div>
+      </div>
+      
+      <!-- Event Card 4 -->
+      <div class="swiper-slide card" data-event-time="2025-07-12T20:00:00">
+      <div class="edit-icon" style="display: none;"><i class="fas fa-edit"></i></div>
+      <div class="ticket-info">
+      <p style="margin-bottom:18px;margin-top:-8px;font-weight:300;font-size:14px; padding:15px">Standard Ticket</p>
+      <div class="seat-info">
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEC<br><span>143</span></div>
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">ROW<br><span>7</span></div>
+      <div style="margin-bottom:6px;font-weight:300;font-size:13px;">SEAT<br><span>3</span></div>
+      </div>
+      </div>
+      <div class="event-details">
+      <div class="gradient-overlay">
+      <img src="./Images/image-1.jpeg" alt="Event">
+      <div class="overlay-content">
+      <h2>Taylor Swift - The Eras Tour</h2>
+      <p>Fri, October 18, 07:00 - Hard Rock Stadium</p>
+      </div>
+      </div>
+      </div>
+      <div class="countdown" style="line-height:4.5rem">
+      <p style="margin-top:-22px;font-size:14px;font-weight:300;">Ticket will be ready in:</p>
+      <div class="timer" style="line-height:1.5rem !important;">
+      <div><span>34</span><h3>DAY</h3></div>
+      <div><span>11</span><h3>HOUR</h3></div>
+      <div><span>33</span><h3>MIN</h3></div>
+      <div><span>52</span><h3>SEC</h3></div>
+      </div>
+      <a href="#" class="details-link">Ticket Details</a>
+      </div>
+      <div class="ticket-info">
+      <p style="margin-bottom:15px;font-weight:300;font-size:13px;margin-top:12px;font-style:italic; color:#efefef;display:flex;align-items:center;justify-content:center;"><img src="./Images/money.jpg" style="margin-top:-6px"><i>ticketmaster.verified</i></p>
+      </div>
+      </div>
+      
+    </div>
+    <!-- Pagination -->
+    <div class="pagination-container">
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  
+  <!-- Popup Form -->
+  <div id="popup-form" class="popup">
+  <div class="popup-content">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <h2>Edit Event Card</h2>
+<!-- Add Delete Button in Popup -->
+<button id="delete-btn" style=" font-size:15px;">Delete</button>
+
+  <form id="edit-form">
+    <label for="event-image">Event Image:</label>
+    <input type="file" id="event-image" accept="image/*">
+    
+  <label for="celebrity-name">Celebrity Name:</label>
+  <input type="text" id="celebrity-name" placeholder="Enter celebrity name">
+  
+  <label for="event-name">Event Name:</label>
+  <input type="text" id="event-name" placeholder="Enter event name">
+  
+  <label for="event-time">Event Time:</label>
+  <input type="text" id="event-time" placeholder="YYYY-MM-DDTHH:mm:ss">
+  
+  <label for="seats-info">Seats Info:</label>
+  <input type="text" id="seats-info" placeholder="Enter seat info (comma-separated)">
+  
+  <label for="countdown-days">Days:</label>
+  <input type="number" id="countdown-days" placeholder="Enter days">
+  
+  <label for="countdown-hours">Hours:</label>
+  <input type="number" id="countdown-hours" placeholder="Enter hours">
+  
+  <label for="countdown-minutes">Minutes:</label>
+  <input type="number" id="countdown-minutes" placeholder="Enter minutes">
+  
+  <label for="countdown-seconds">Seconds:</label>
+  <input type="number" id="countdown-seconds" placeholder="Enter seconds">
+  
+  <button type="button" id="save-btn">Save</button>
+  </form>
+  </div>
+  </div>
+  
+  <div class="actions">
+  <button class="transfer-btn" id="open-overlay-btn">Transfer</button>
+  <button class="sell-btn">Sell</button>
+  </div>
+ 
+ 
+ 
+ <!-- Button to open the overlay -->
+ 
+ <!-- Overlay -->
+ <div class="overlay" id="overlay">
+ <div class="seat-selection-box">
+ <!-- Header section -->
+ <div class="seat-selection-header">
+ <h3>SELECT SEAT TO TRANSFER</h3>
+ </div>
+ 
+ <!-- Seat container -->
+ <div class="seat-container" id="seat-container">
+ <!-- Seats will be generated here dynamically -->
+ </div>
+ 
+ <!-- Selected seats counter and Transfer button -->
+ <div class="seat-counter">
+ <div id="seat-count">Selected Seats: 0</div>
+ <div id="transfer-btn">
+ <button id="open-overlay2-btn">Transfer To</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ 
+  
+ 
+    
+  <!-- Overlay2 (User Selection) -->
+  <div class="overlay2" id="overlay2">
+  <div class="user-selection-box">
+  <div class="seat-selection-header">
+  <h3>TRANSFER TO</h3>
+  </div>
+  <!-- Button 1: Select User 1 -->
+  <button class="user-selection-btn" id="open-overlay3-btn">
+  Select From Contacts <img src="./Images/first.jpg">
+  </button>
+  
+  <!-- Button 2: Select User 2 -->
+  <button class="user-selection-btn">
+  Manually Enter A Recipient <img src="./Images/second.jpg">
+  </button>
+  <img src="./Images/information.jpg">
+  <p style="color:#5f5d5f;position:absolute;left:24px;bottom:12px;font-size:14px" id="back"><i class="fa fa-angle-left"></i> back</p>
+  </div>
+  </div>
+  </div>
+  
+  <div class="overlay3" id="overlay3">
+   <div class="popup-main">
+   <div class="seat-selection-header">
+   <h3>TRANSFER TICKETS</h3>
+   </div>
+   <div class="popup-body">
+   <p id="seat-count2">Please select a ticket</p>
+   <form>
+   <label for="first-name">First Name</label>
+   <input type="text" id="first-name" name="first-name">
+   
+   <label for="last-name">Last Name</label>
+   <input type="text" id="last-name" name="last-name">
+   
+   <label for="email-phone">Email/Phone</label>
+   <input type="text" id="email-phone" name="email-phone">
+   
+   <label for="note">Note</label>
+   <textarea id="note" name="note" maxlength="160"></textarea>
+   <p id="char-count">160 Characters left</p>
+   </form>
+   </div>
+   <div class="popup-footer">
+   <button class="back-btn" id="back-btn"><i class="fa fa-angle-left"></i> Back</button>
+   <button class="transfer-btn2" id="transfer-btn2">Transfer To</button>
+   </div>
+   </div>
+  </div>
+  
+  <!-- Load Swiper JS before your script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./final_script.js"></script>
+
+   
+    </body>
+    
+</html>
